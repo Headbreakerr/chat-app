@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap");
+
+body {
+  background-color: #e0eadb;
+  line-height: 0.5;
+  text-indent: 0;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.chat-area header {
+  display: flex;
+  align-items: center;
+  padding: 18px 30px;
+  padding: 0;
+}
+.chat-area header i {
+  margin-bottom: 12px;
+  margin-right: 10px;
+  font-size: 18px;
+  color: #333;
+}
+.chat-area header img {
+  height: 45px;
+  width: 45px;
+  margin-bottom: 15px; /* Add this line to reset margin-bottom */
+}
+
+.chat-area {
+  padding: 25px 30px;
+  background-color: azure;
+  width: 35vw;
+  border-radius: 20px;
+}
+.wrapper img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+.details {
+  margin-left: 10px;
+}
+.details span {
+  font-size: 17px;
+  font-weight: 600;
+}
