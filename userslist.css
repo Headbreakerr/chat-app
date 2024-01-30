@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap");
+body {
+  background-color: #e0eadb;
+  line-height: 0.5;
+  text-indent: 0;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 90vh;
+  font-family: "Montserrat", sans-serif;
+}
+.users {
+  padding: 25px 30px;
+  background-color: azure;
+  width: 35vw;
+}
+@media screen and (min-width: 600px) {
+  .users {
+    width: 50vw;
+  }
+}
+.users {
+  box-shadow: 0 80px 160px rgba(128, 54, 54, 0.1); /* Adjust the values as needed */
+}
+.users header,
+.users-list a {
+  display: flex;
+  /* margin-top: 5px; */
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 20px;
+}
+.users-list a {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+}
+.wrapper img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+:is(.users, .users-list) .content,
+header .content {
+  display: flex;
+  align-items: center;
+}
+:is(.users, .users-list) .details {
+  margin-left: 15px;
+}
+.users header .content img {
+  height: 50px;
+  width: 50px;
+}
+.users header .details p {
+  line-height: 0;
+}
+.users header a {
+  text-decoration: none;
+}
+.users header a:hover {
+  text-decoration: underline;
+}
+.users a {
+  text-decoration: none;
+  color: #333;
+}
+/* .users a:hover {
+  text-decoration: underline;
+} */
+:is(.users, .users-list) .details span {
+  font-size: 18px;
+  font-weight: 700;
+}
+.users header .logout {
+  color: #fff;
+  border-radius: 5%;
+  background: #333;
+  padding: 7px 15px;
+  font-size: 17px;
+}
+.users .search {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.users .search .text {
+  font-style: 18px;
+}
+.users .search input {
+  position: absolute;
+  height: 42px;
+  width: calc(100% - 70px);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  font-style: 16px;
+  padding: 0 13px;
+}
+.users .search button {
+  width: 47px;
+  height: 42px;
+  outline: none;
+  border: none;
+  color: #fff;
+  background: #000;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  font-size: 17px;
+}
+
+.users-list {
+  max-height: 350px;
+  overflow-y: scroll;
+}
+.users-list::-webkit-scrollbar {
+  width: 0;
+}
+.users-list a {
+  padding-right: 10px;
+  border-bottom-color: #f1f1f1;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+.users-list a:last-child {
+  border: none;
+  margin-bottom: 0;
+}
+.users-list a .content img {
+  height: 40px;
+  margin-bottom: 20px !important;
+  width: 40px;
+  height: 40px;
+  width: 40px;
+}
+.users-list a .content p {
+  color: #67676a;
+}
+.users-list a .status-dot {
+  font-size: 12px;
+  color: #468669;
+}
+.users-list a .status-dot .offline {
+  color: #ccc;
+}
