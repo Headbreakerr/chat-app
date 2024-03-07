@@ -23,6 +23,7 @@
   text-align: center;
   border-radius: 5px;
   margin-bottom: 10px;
+  display: none;
 }
 .card-header {
   background-color: #333;
@@ -60,6 +61,22 @@
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+.password-container {
+  position: relative;
+}
+
+.password-container i {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.password-container i.active::before {
+  color: #333;
+  content: "\f070";
 }
 
 .btn {

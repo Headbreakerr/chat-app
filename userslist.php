@@ -108,5 +108,7 @@
         </div>
       </section>
     </div>
+
+    <script src="./javascript/navbar.js"></script>
   </body>
 </html>
