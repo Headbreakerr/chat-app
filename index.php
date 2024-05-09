@@ -21,8 +21,8 @@
             <div class="text-header">Register</div>
           </div>
           <div class="card-body">
-            <div class="error-text">This is Error Text!</div>
-            <form action="#">
+            <form action="#" enctype="multipart/form-data">
+              <div class="error-text">This is Error Text!</div>
               <div class="form-group field input">
                 <label for="username">Username:</label>
                 <input
@@ -31,6 +31,7 @@
                   name="username"
                   id="username"
                   type="text"
+                  required
                 />
               </div>
               <div class="form-group field input">
@@ -41,6 +42,7 @@
                   name="email"
                   id="email"
                   type="email"
+                  required
                 />
               </div>
               <div class="form-group field input">
@@ -51,6 +53,7 @@
                   name="address"
                   id="address"
                   type="text"
+                  required
                 />
               </div>
               <div class="form-group field input">
@@ -62,6 +65,7 @@
                     name="password"
                     id="password"
                     type="password"
+                    required
                   />
                   <i class="fas fa-eye"></i>
                 </div>
@@ -75,10 +79,11 @@
                   id="image"
                   required=""
                   class="form-control"
+                  required
                 />
               </div>
               <div class="field button">
-              <input type="submit" class="btn" value="submit" />
+               <input type="submit" class="btn" value="submit" />
               </div>
               <div class="form-text">
                 <p>
