@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include_once "config.php";
 $name = mysqli_real_escape_string($conn, $_POST['username']);
 $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -23,15 +23,15 @@ if(!empty($name) && !empty($email) && !empty($address) && !empty($pass)){
 
                 $valid_ext = ["jpg", "png", "jpeg"];
 
-                if(in_array($img_extension,$valid_ext)==true){
+                if(in_array($img_extension,$valid_ext)===true){
                     $time = time();
-                    $new_img_name = $img_temp.$time;
-
+                    $new_img_name = $img_temp. "_" . $time;
+                    $destination = "images/" . $new_img_name;
                     
-                    if(move_uploaded_file($img_temp, $new_img_name)){
+                    if(move_uploaded_file($img_temp, $destination)){
                         $status = "Active Now";
                         $random_id = rand(time(), 10000000);
-
+                        $image_path = mysqli_escape_string($conn, $destination);
                         $sql_2 = mysqli_query($conn, "INSERT INTO users (unique_id, fname, email, address, password, image, status)
                               VALUES ({$random_id}, '{$name}', '{$email}', '{$address}', '{$pass}', '{$new_img_name}', '{$status}')");
 
