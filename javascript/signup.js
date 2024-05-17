@@ -2,9 +2,6 @@ const form = document.querySelector(".signup form"),
   continueBtn = form.querySelector(".button input[type='submit']"),
   errorText = form.querySelector(".error-text");
 
-// Log the reference to the continue button
-console.log(continueBtn);
-
 form.onsubmit = (e) => {
   e.preventDefault();
 };
@@ -23,10 +20,13 @@ continueBtn.onclick = () => {
         let data = xhr.response;
         console.log(data);
         if (data == "success") {
-          // Log a message if success
+          errorText.textContent = data;
+          errorText.style.display = "block";
+          errorText.style.background = "green";
           console.log("Success!");
         } else {
           // Log the error message and display it
+
           console.log("Error:", data);
           errorText.textContent = data;
           errorText.style.display = "block";
