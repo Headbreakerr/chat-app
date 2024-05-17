@@ -14,7 +14,7 @@
     />
   </head>
   <body>
-    <div class="wrapper" id="sect">
+    <div class="wrapper">
       <section class="form signup">
         <div class="card">
           <div class="card-header">
